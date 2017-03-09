@@ -1,7 +1,7 @@
 Recipe Finder
 =============
 
-This is a test exercise, completed for a well known UK organisation prior to an inteview.
+This is a test exercise, completed for a well known UK organisation prior to an interview.
 
 Introduction
 ------------
