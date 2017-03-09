@@ -29,8 +29,7 @@ module.controller('SearchCtrl', function($scope, $http, localStorageService) {
 
     /**
      * Somewhat dubious (but working) method for deep cloning an object
-     * without having to include the whole of lodash in order just
-     * so we can use _.cloneDeep()
+     * without having to include the whole of lodash just to use _.cloneDeep()
      */
     $scope.cloneObject = function(originalObject) {
         return JSON.parse(JSON.stringify(originalObject));
