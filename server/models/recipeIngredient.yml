@@ -5,7 +5,7 @@ attributes:
         primaryKey: true
 
     ingredient:
-        type:       INTEGER
+        type:       STRING
         primaryKey: true
 
     quantity:
