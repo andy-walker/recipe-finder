@@ -1,0 +1,7 @@
+# Test sample data to populate users
+
+- userId:    1
+  userName:  Joe
+  sessionId: NOT_A_REAL_SESSION_ID
+
+

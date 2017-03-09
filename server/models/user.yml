@@ -1,0 +1,13 @@
+attributes:
+
+    userId:
+        type:          INTEGER
+        primaryKey:    true
+        autoIncrement: true
+
+    userName:
+        type: STRING
+
+    sessionId:
+        type: STRING
+

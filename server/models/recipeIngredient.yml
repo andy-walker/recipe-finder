@@ -1,0 +1,12 @@
+attributes:
+
+    recipeId:
+        type:       INTEGER
+        primaryKey: true
+
+    ingredient:
+        type:       INTEGER
+        primaryKey: true
+
+    quantity:
+        type: STRING 

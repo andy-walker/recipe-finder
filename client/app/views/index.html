@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <base href="/" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/bower_components/angularjs-slider/dist/rzslider.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body ng-app="RecipeFinder">
+  
+  <header>
+    <div class="user-status">
+      Logged in as <strong>Joe</strong>
+    </div>
+    <h1>Recipe Finder</h1>
+  </header>
+  
+  <div ng-view ng-cloak></div>
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="/bower_components/angularjs-slider/dist/rzslider.js"></script>
+  <script src="/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+  <script src="/app/app.js"></script>
+  <script src="/app/controllers/search-controller.js"></script>
+  <script src="/app/controllers/recipe-controller.js"></script>
+
+</body>
+</html>

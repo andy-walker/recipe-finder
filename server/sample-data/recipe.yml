@@ -1,0 +1,15 @@
+# Test sample data to populate users
+
+- recipeId:          1
+  recipeTitle:       Lemon Chicken
+  recipeCookingTime: 30
+
+- recipeId:          2
+  recipeTitle:       Chicken Caesar Salad
+  recipeCookingTime: 25
+
+- recipeId:          3
+  recipeTitle:       Beef Stroganoff
+  recipeCookingTime: 30
+
+

@@ -1,0 +1,6 @@
+db:
+    type:    sqlite
+    storage: recipes.db
+
+webserver:
+    port: 5000

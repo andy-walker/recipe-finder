@@ -1,0 +1,56 @@
+<div ng-show="recipe.recipeId">
+
+  <aside class="topbar">
+    <div class="back-link">
+      <a href="/"><i class="fa fa-chevron-left"></i> Back</a>
+    </div>
+    <div class="star-recipe">
+      <span ng-hide="recipe.recipeIsStarred"><button class="btn-star" ng-click="starRecipe()">Star Recipe <i class="fa fa-star inactive"></i></button></span>
+      <span ng-show="recipe.recipeIsStarred"><button class="btn-star" ng-click="unstarRecipe()">Unstar Recipe <i class="fa fa-star active"></i></button></span>
+    </div>
+    <div class="clear"></div>
+  </aside>
+
+  <aside class="sidebar">
+    <span ng-hide="recipe.recipeIsStarred"><button class="btn-star" ng-click="starRecipe()"><i class="fa fa-star inactive"></i> Star Recipe</button></span>
+    <span ng-show="recipe.recipeIsStarred"><button class="btn-star" ng-click="unstarRecipe()"><i class="fa fa-star active"></i> Unstar Recipe</button></span>
+    <h4>Ingredients</h4>
+    <div class="ingredients">
+      <div class="row" ng-repeat="ingredient in recipe.recipeIngredients">
+        <div class="ingredient-qty">{{ ingredient.quantity }}</div>
+        <div class="ingredient-name">{{ ingredient.ingredient }}</div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="back-link">
+      <a href="/"><i class="fa fa-chevron-left"></i> Back</a>
+    </div>
+  </aside>
+
+  <div id="recipe-detail">
+
+    <h2>{{recipe.recipeTitle}}</h2>
+
+    <p><strong>Cooking time:</strong> {{recipe.recipeCookingTime}} minutes</p>
+
+    <aside class="ingredients-bar">
+      <h4>Ingredients</h4>
+      <div class="ingredients">
+        <div class="row" ng-repeat="ingredient in recipe.recipeIngredients">
+          <div class="ingredient-qty">{{ ingredient.quantity }}</div>
+          <div class="ingredient-name">{{ ingredient.ingredient }}</div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </aside>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate purus lorem. Sed eu hendrerit sem. Pellentesque suscipit enim eget nisl lacinia, a rhoncus turpis malesuada. Duis laoreet rhoncus justo sed fermentum. Vestibulum fringilla turpis eu venenatis commodo. In hac habitasse platea dictumst. Sed ullamcorper vulputate dui, vel volutpat nunc tempus sit amet. Cras at ornare nisl. Curabitur ultricies odio feugiat diam commodo, a venenatis odio cursus.</p>
+
+    <p>Integer vitae porta odio. Phasellus imperdiet diam sed lorem volutpat porttitor. Nam eget lectus viverra, viverra nunc nec, interdum eros. Suspendisse volutpat ex et ipsum elementum, sed vestibulum turpis facilisis. Etiam est elit, convallis sit amet ornare elementum, dictum non turpis. Praesent eget lacinia dui, id aliquet risus. Proin sit amet tortor vitae lectus hendrerit elementum eu id arcu.</p>
+  </div>
+
+</div>
+
+<div ng-hide="recipe.recipeId">
+  <p class="not-found">Sorry, this recipe doesn't exist or may have been removed</p> 
+</div>

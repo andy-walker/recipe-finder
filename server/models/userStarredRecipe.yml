@@ -1,0 +1,9 @@
+attributes:
+
+    userId:
+        type:       INTEGER
+        primaryKey: true
+
+    recipeId:
+        type:       INTEGER
+        primaryKey: true

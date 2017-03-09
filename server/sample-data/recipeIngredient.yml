@@ -1,0 +1,37 @@
+# Test sample data to populate recipeIngredients
+
+- recipeId:   1
+  ingredient: Chicken Breast
+  quantity:   4
+
+- recipeId:   1
+  ingredient: Thyme
+  quantity:   1 tsp
+
+- recipeId:   1
+  ingredient: Lemon
+  quantity:   1
+
+- recipeId:   2
+  ingredient: Lettuce
+  quantity:   1
+
+- recipeId:   2
+  ingredient: Croutons
+  quantity:   1
+
+- recipeId:   2
+  ingredient: Parmesan
+  quantity:   1
+
+- recipeId:   3
+  ingredient: Beef
+  quantity:   1
+
+- recipeId:   3
+  ingredient: Mustard
+  quantity:   1
+
+- recipeId:   3
+  ingredient: Mushrooms
+  quantity:   1

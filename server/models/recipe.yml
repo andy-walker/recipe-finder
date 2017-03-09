@@ -1,0 +1,13 @@
+attributes:
+    
+    recipeId: 
+        primaryKey:    true
+        type:          INTEGER
+        autoIncrement: true
+
+    recipeTitle:
+        type: STRING
+
+    recipeCookingTime:
+        type: INTEGER
+

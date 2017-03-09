@@ -1,0 +1,53 @@
+<section class="filters">
+  
+  <form>
+      
+    <div class="filter filter-input">
+      <span class="field-wrapper">
+        <input type="text" name="filterTitle" placeholder="Filter by recipe" ng-model="filters.recipe" ng-change="updateResults()" autocomplete="off" />
+        <i class="icon-search fa fa-search"></i>
+        <i ng-hide="filters.recipe == ''" ng-click="filters.recipe = ''; updateResults();" class="icon-clear fa fa-close"></i>
+      </span>
+    </div>
+    
+    <div class="filter filter-input">
+      <span class="field-wrapper">
+        <input type="text" name="filterIngredients" placeholder="Filter by ingredients" ng-model="filters.ingredients" ng-change="updateResults()" autocomplete="off" />
+        <i class="icon-search fa fa-search"></i>
+        <i ng-hide="filters.ingredients == ''" ng-click="filters.ingredients = ''; updateResults();" class="icon-clear fa fa-close"></i>
+      </span>
+    </div>
+
+    <div class="filter filter-cooking-time-label">
+      Cooking time<br />
+      <span class="time-indicator">{{filters.cookingTime.min}} - {{filters.cookingTime.max}} mins</span>
+    </div>
+
+    <div class="filter filter-cooking-time">
+      <rzslider rz-slider-model="filters.cookingTime.min" rz-slider-high="filters.cookingTime.max" rz-slider-options="slider.options"></rzslider>
+    </div>
+
+    <div class="filter filter-starred">
+      <label>
+        <input type="checkbox" name="starred" ng-model="filters.starred" ng-change="updateResults()" />
+        <span class="starred-label">Starred</span>
+      </label>
+    </div>
+    <div class="clear"></div>
+  </form>
+
+</section>
+
+<section class="results">
+  <p class="not-found" ng-show="isFiltered() && results.length == 0">Sorry, nothing matched your filter term</p>
+  <p class="not-found" ng-show="!isFiltered() && results.length == 0">Sorry, we currently have no recipes for you</p>
+  <ul ng-show="results.length">
+    <li class="search-result" ng-repeat="result in results">
+      <a href="/recipe/{{result.recipeId}}">
+        <h3>{{result.recipeTitle}} <i ng-show="result.recipeIsStarred" class="fa fa-star starred"></i></h3>
+        <div class="ingredients">{{result.recipeIngredients}}</div>
+        <div class="cooking-time" ng-show="result.recipeCookingTime"><i class="fa fa-clock-o"></i> {{result.recipeCookingTime}} mins</div>
+      </a>
+    </li>
+  </ul>
+</section>
