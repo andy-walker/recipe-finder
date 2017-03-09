@@ -10,7 +10,7 @@ module.exports = class AjaxAPI {
     
     /**
      * Retrieve an ingredient list for an array of recipe ids
-     * @param {Array} recipeIds  an array of recipe ids to retrieve ingredients for
+     * @param   {Array}  recipeIds  an array of recipe ids to retrieve ingredients for
      * @returns {Object}
      */
     getRecipeIngredients(recipeIds) {
@@ -181,6 +181,9 @@ module.exports = class AjaxAPI {
                     for (let r of results)
                         recipeIds.push(r.recipeId);
 
+                    // was proving difficult to get Sequelize to search by ingredient, but also return all the
+                    // ingredients for each recipe - so we do an inner join in the main query to search by ingredient,
+                    // then this function runs a second to query to retrieve the ingredients 
                     var ingredients = yield app.webserver.ajax.getRecipeIngredients(recipeIds);
 
                     result = {
